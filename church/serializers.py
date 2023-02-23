@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from church.models import Person, Macro, Cell
+from church.models import Person, Macro, Cell, Event
 
 
 class MacroSerializer(serializers.ModelSerializer):
@@ -18,3 +18,9 @@ class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
         fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'cell']
+
+
+class EventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = ['name', 'start_date', 'end_date', 'location', 'cost', 'requirements']
