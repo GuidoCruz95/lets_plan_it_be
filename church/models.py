@@ -24,3 +24,13 @@ class Person(models.Model):
     lastname = models.CharField(max_length=30)
     birthdate = models.CharField(max_length=30)
     cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='people', null=True)
+
+
+class Event(models.Model):
+    event_id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    name = models.CharField(max_length=20)
+    start_date = models.CharField(max_length=20)
+    end_date = models.CharField(max_length=20)
+    location = models.CharField(max_length=20)
+    cost = models.IntegerField(max_length=20)
+    requirements = models.CharField(max_length=20)
