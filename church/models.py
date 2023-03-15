@@ -23,6 +23,7 @@ class Person(models.Model):
     name = models.CharField(max_length=30)
     lastname = models.CharField(max_length=30)
     birthdate = models.CharField(max_length=30)
+    about_you = models.CharField(max_length=200, default="")
     cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='people', null=True)
 
 
@@ -32,5 +33,5 @@ class Event(models.Model):
     start_date = models.CharField(max_length=20)
     end_date = models.CharField(max_length=20)
     location = models.CharField(max_length=20)
-    cost = models.IntegerField(max_length=20)
+    cost = models.IntegerField()
     requirements = models.CharField(max_length=20)

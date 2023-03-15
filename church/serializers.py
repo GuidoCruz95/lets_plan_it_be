@@ -17,7 +17,7 @@ class CellSerializer(serializers.ModelSerializer):
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'cell']
+        fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'cell', 'about_you']
 
 
 class EventSerializer(serializers.ModelSerializer):
