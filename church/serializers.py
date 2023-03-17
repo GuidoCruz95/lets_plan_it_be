@@ -11,7 +11,7 @@ class MacroSerializer(serializers.ModelSerializer):
 class CellSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cell
-        fields = ['cell_id', 'name', 'description', 'macro']
+        fields = ['name', 'description', 'macro']
 
 
 class PersonSerializer(serializers.ModelSerializer):
