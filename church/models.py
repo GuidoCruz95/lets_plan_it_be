@@ -29,9 +29,9 @@ class Person(models.Model):
 
 class Event(models.Model):
     event_id = models.UUIDField(primary_key=True, default=uuid.uuid4)
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=100)
     start_date = models.CharField(max_length=20)
     end_date = models.CharField(max_length=20)
-    location = models.CharField(max_length=20)
+    location = models.CharField(max_length=100)
     cost = models.IntegerField()
-    requirements = models.CharField(max_length=20)
+    requirements = models.CharField(max_length=300)
