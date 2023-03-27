@@ -1,5 +1,5 @@
-# Planning my Church
-A REST api written in Django to organize the church elements.
+# Lets Plan It
+A REST api written in Django to organize the LetsPlanIt elements.
 
 ## Technologies used
 * [DRF](www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs
@@ -19,7 +19,7 @@ A REST api written in Django to organize the church elements.
 * #### Dependencies
     1. Cd into your the cloned repo as such:
         ```bash
-            $ cd be_planning_my_church
+            $ cd lets_plan_it
         ```
     2. Create and fire up your virtual environment:
         ```bash
