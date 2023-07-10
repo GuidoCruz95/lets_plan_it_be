@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from church.serializers import PersonSerializer, EventSerializer, CellSerializer
-from church.models import Person, Event, Cell
+from letsPlanIt.serializers import PersonSerializer, EventSerializer, CellSerializer
+from letsPlanIt.models import Person, Event, Cell
 
 
 # Create your views here.
