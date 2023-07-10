@@ -24,7 +24,7 @@ class Person(models.Model):
     lastname = models.CharField(max_length=30)
     birthdate = models.CharField(max_length=30)
     about_you = models.CharField(max_length=200, default="")
-    cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='people', null=True)
+    cell = models.ForeignKey(Cell, on_delete=models.CASCADE, related_name='letsPlanIt', null=True)
 
 
 class Event(models.Model):
@@ -44,4 +44,3 @@ class Subscription(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     payment_status = models.CharField(max_length=10)
     notes = models.CharField(max_length=300)
-

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from church.models import Person, Macro, Cell, Event
+from letsPlanIt.models import Person, Macro, Cell, Event
 
 
 class MacroSerializer(serializers.ModelSerializer):
