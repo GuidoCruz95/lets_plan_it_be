@@ -1,26 +1,26 @@
 from rest_framework import serializers
-from letsPlanIt.models import Person, Macro, Cell, Event
-
-
-class MacroSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Macro
-        fields = ['macro_id', 'name', 'creation_date', 'closing_date']
-
-
-class CellSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cell
-        fields = ['name', 'description', 'macro']
+from letsPlanIt.models import Person, Event, Subscription, PaymentHistory
 
 
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'cell', 'about_you']
+        fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'about_you']
 
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ['name', 'start_date', 'end_date', 'location', 'cost', 'requirements']
+
+
+class SubscriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subscription
+        fields = ['notes', 'total_payed', 'person', 'event', 'total_payed']
+
+
+class PaymentHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PaymentHistory
+        fields = ['date', 'amount', 'notes', 'subscription']
