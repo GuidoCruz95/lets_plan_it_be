@@ -1,9 +1,8 @@
 from rest_framework import viewsets
-from letsPlanIt.serializers import PersonSerializer, EventSerializer, CellSerializer
-from letsPlanIt.models import Person, Event, Cell
+from letsPlanIt.serializers import PersonSerializer, EventSerializer, SubscriptionSerializer, PaymentHistorySerializer
+from letsPlanIt.models import Person, Event, Subscription, PaymentHistory
 
 
-# Create your views here.
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
@@ -14,6 +13,11 @@ class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventSerializer
 
 
-class CellViewSet(viewsets.ModelViewSet):
-    queryset = Cell.objects.all()
-    serializer_class = CellSerializer
+class SubscriptionViewSet(viewsets.ModelViewSet):
+    queryset = Subscription.objects.all()
+    serializer_class = SubscriptionSerializer
+
+
+class PaymentHistoryViewSet(viewsets.ModelViewSet):
+    queryset = PaymentHistory.objects.all()
+    serializer_class = PaymentHistorySerializer

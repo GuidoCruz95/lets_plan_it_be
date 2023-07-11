@@ -1,24 +1,22 @@
 from django.contrib import admin
-from .models import Person, Cell, Macro, Subscription
+from .models import Person, Subscription, Event, PaymentHistory
 
 
-class MacroAdmin(admin.ModelAdmin):
-    fields = ['name', 'creation_date', 'closing_date']
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    fields = ['__all__']
 
 
-class CellAdmin(admin.ModelAdmin):
-    fields = ['name', 'description', 'macro']
-
-
+@admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
-    fields = ['ci', 'email', 'name', 'lastname', 'birthdate', 'cell']
+    fields = ['__all__']
 
 
+@admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):
-    fields = ['subscription_id', 'person', 'event', 'payment_status', 'notes']
+    fields = ['__all__']
 
 
-admin.site.register(Macro, MacroAdmin)
-admin.site.register(Cell, CellAdmin)
-admin.site.register(Person, PersonAdmin)
-admin.site.register(Subscription, SubscriptionAdmin)
+@admin.register(PaymentHistory)
+class PaymentHistoryAdmin(admin.ModelAdmin):
+    fields = ['__all__']
